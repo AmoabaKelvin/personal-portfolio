@@ -4,53 +4,32 @@ import Head from "next/head";
 const Seo = () => (
   <>
     <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Kelvin Amoaba - Portfolio</title>
+      <meta name="title" content="Kelvin Amoaba" />
+      {/* Add favicon */}
+      <link rel="icon" href="/favicon/favicon.ico" />
       <meta
         name="description"
-        content="software engineer based in Accra, Ghana. I'm passionate about building products that solve real world problems."
+        content="Full-stack Software Engineer with passion for building beautiful and fully functional web applications."
       />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.kelvinamoaba.me/" />
+      <meta property="og:title" content="Kelvin Amoaba - Portfolio" />
       <meta
-        name="keywords"
-        content="Portfolio, Full Stack Developer, Software Developer"
+        property="og:description"
+        content="Full-stack Software Engineer with passion for building beautiful and fully functional web applications."
       />
-      <meta name="author" content="Kelvin Amoaba" />
-      <link rel="icon" href="/favicon/favicon.ico" />
+      <meta property="og:image" content="" />
+
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:url" content="https://www.kelvinamoaba.me/" />
+      <meta property="twitter:title" content="Kelvin Amoaba - Portfolio" />
+      <meta
+        property="twitter:description"
+        content="Portfolio of Kelvin Amoaba, fullstack software engineer."
+      />
     </Head>
-    <NextSeo
-      title="Kelvin Amoaba"
-      description="software engineer based in Accra, Ghana. I'm passionate about building products that solve real world problems."
-      canonical="https://www.kelvinamoaba.me"
-      openGraph={{
-        url: "https://www.kelvinamoaba.me",
-        title: "Kelvin Amoaba",
-        description:
-          "software engineer based in Accra, Ghana. I'm passionate about building products that solve real world problems.",
-        images: [
-          {
-            url: "https://www.example.com/og-image01.jpg",
-            width: 800,
-            height: 600,
-            alt: "Og Image Alt",
-            type: "image/jpeg",
-          },
-          {
-            url: "https://www.example.com/og-image02.jpg",
-            width: 900,
-            height: 800,
-            alt: "Og Image Alt Second",
-            type: "image/jpeg",
-          },
-          { url: "https://www.example.com/og-image03.jpg" },
-          { url: "https://www.example.com/og-image04.jpg" },
-        ],
-        site_name: "YourSiteName",
-      }}
-      twitter={{
-        handle: "@kelamoaba",
-        site: "@kelamoaba.me",
-        cardType: "summary_large_image",
-      }}
-    />
   </>
 );
 
