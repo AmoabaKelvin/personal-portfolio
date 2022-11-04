@@ -8,7 +8,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [formValid, setFormValid] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     // Check if form is valid
     if (name && email && message) {
@@ -44,15 +44,15 @@ const Contact = () => {
     console.log(name, email, message);
   };
 
-  const handleNameChange = (e) => {
+  const handleNameChange = (e: any) => {
     setName(e.target.value);
   };
 
-  const handleEmailChange = (e) => {
+  const handleEmailChange = (e: any) => {
     setEmail(e.target.value);
   };
 
-  const handleMessageChange = (e) => {
+  const handleMessageChange = (e: any) => {
     setMessage(e.target.value);
   };
   return (
