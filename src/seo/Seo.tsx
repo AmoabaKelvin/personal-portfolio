@@ -20,7 +20,7 @@ const Seo = () => (
         property="og:description"
         content="Full-stack Software Engineer with passion for building beautiful and fully functional web applications."
       />
-      <meta property="og:image" content="" />
+      <meta property="og:image" content="/images/portfolio/portfolio.png" />
 
       <meta property="twitter:card" content="summary" />
       <meta property="twitter:url" content="https://www.kelvinamoaba.me/" />
