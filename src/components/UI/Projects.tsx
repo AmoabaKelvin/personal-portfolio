@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { PORTFOLIO_ITEMS } from "../../../data/portfolio";
-// import Image from "next/image";
+import { SiGithub } from "react-icons/si";
 
 type CardProps = {
   title: string;
@@ -15,22 +14,37 @@ type CardProps = {
 const Card = ({ title, description, image, github, link }: CardProps) => {
   return (
     <div className="flex flex-col dark:bg-slate-900 bg-white shadow-xl rounded-lg hover:-translate-y-1 transition-all duration-200 ease-in">
-      <img src={image} alt="Hello" className="w-full h-60" />
+      <Image
+        src={image}
+        alt={title}
+        width={1920}
+        height={1080}
+        layout="responsive"
+      />
       <div className="mt-3 p-3 py-4">
-        <h1 className="text-2xl">
-          <a href={link} target="_blank" rel="noreferrer">
-            {title}
-          </a>
-        </h1>
+        <div className="flex justify-between items-center">
+          <h1 className="text-2xl">
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-500"
+            >
+              {title}
+            </a>
+          </h1>
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              className="text-3xl"
+            >
+              <SiGithub className="inline-block mr-1" />
+            </a>
+          )}
+        </div>
         <p className="mt-4">{description}</p>
-        <a
-          href={github}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-block bg-slate-300 px-2 text-black rounded mt-4"
-        >
-          Github
-        </a>
       </div>
     </div>
   );
