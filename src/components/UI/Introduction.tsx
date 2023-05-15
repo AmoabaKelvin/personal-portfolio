@@ -1,9 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 import Image from "next/image";
 import Link from "../links/Link";
 
-import { SiLinkedin, SiGithub, SiDevdotto } from "react-icons/si";
+import { SiDevdotto, SiGithub, SiLinkedin } from "react-icons/si";
 
 const Introduction = () => {
   const socialLinks = [
@@ -34,18 +33,16 @@ const Introduction = () => {
         alt="Kelvin Amoaba"
       />
       <h1 className="name mt-4 text-center">Kelvin Amoaba</h1>
-      <p className="mt-3 text-slate-800 dark:text-slate-300 leading-8 text-center md:text-lg">
-        I'm a software engineer based in Accra, Ghana. I'm passionate about
-        building products that solve real world problems.
+      <p className="mt-6 text-slate-800 dark:text-slate-300 leading-8 text-center md:text-lg">
+        As a software engineer, my passion lies in creating practical solutions
+        for real-life problems. I possess a deep enthusiasm for innovation,
+        utilizing my expertise to develop remarkable products that drive
+        positive change.
       </p>
-      <div className="grid grid-cols-3 gap-5 mt-2">
+      <div className="grid grid-cols-3 gap-5 mt-6">
         {socialLinks.map((link, index) => (
-          <Link
-            href={link.href}
-            key={index}
-            className="flex items-center gap-1"
-          >
-            {link.icon}
+          <Link href={link.href} key={index} className="flex items-center">
+            <span className="mr-2 text-xl">{link.icon}</span>
             {link.name}
           </Link>
         ))}
